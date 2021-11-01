@@ -1,0 +1,172 @@
+body {
+	margin: 20px 0px 0px 0px;
+	padding: 0;
+	background: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #3C3D3F;
+	width: 90%;
+	
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 2.8em;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+p, ul, ol {
+	margin-top: 0;
+	line-height: 180%;
+} 
+  ul li{
+	float: left;
+	list-style: none;
+	display: inline;
+	text-decoration: none;
+
+}
+#uno h1{
+	width: 30%;
+	float: left ;
+}
+/* para header no aplicamos estilos*/
+/* cabecera engloba el título y el menú. No es el header*/
+/* cabecera */
+/* la mejor forma de hacer columnas (colocar elementos uno al lado de otro) colocar uno a la derecha o a la izquierda y 
+agrupar los otros dos para colocar este bloque (columna) al lado opuesto del otro elemento. Dentro del bloque que contiene dos 
+elementos los colocamos los dos para el mismo lado*/
+
+#uno{
+margin-bottom:50px;
+
+}
+#casa{
+height: 800px;
+width:200px;
+margin: right 20px;
+float: left;
+}
+header{
+	width: max 1200px; 
+	width: min 600px;
+	height: 50px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-right:auto ;
+}
+header img{
+	width: 150px;
+}
+
+#hola ,#hola1, #hola2,#hola3{
+padding-top:20px;
+padding-bottom: 10px;
+display: block;	
+}
+#hola img{
+	margin-left:10px;
+}
+#lateral-dch {
+	float: right;
+	width:20%;
+	margin-top:0px;
+	margin-left:200px; 
+	text-align:left;
+
+
+	
+}
+#lateral-dch ul{
+	text-decoration: none;
+	list-style-type: square;
+}
+form {
+	float:right;
+	width: 280px;
+	height: 40px;
+}
+
+/* logo */
+/* Menu */
+#menu {
+	margin-top: 13px;
+	margin-left: 30px;
+	margin-right: 30px;
+	width: 700px;
+	height: 37px;
+}
+
+#menu a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #0C0C0C;
+	float: left;
+	margin-top: 13px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+section nav {
+	float:right;
+	text-align:left;
+}
+
+#menu .current_page_item a {
+	background: #EB1D1D;
+	text-decoration: none;
+	color: #FFFFFF;
+	float:left;
+}
+
+#menu .current_page_item a {
+	color: #FFFFFF;
+}
+
+
+/* buscar */
+
+/* Pagina */
+
+/* menú lateral */
+
+
+/* contenido */
+
+/* lateral-dch */
+
+#lateral-dch h2 {
+	letter-spacing: -2px;
+	font-size:1.4em;
+	color: #414141;
+}
+
+/* Footer */
+
+#footer  {
+	
+	width:max 1200px;
+	height: 20px;
+	margin-left: 1000px;
+	border-top: 1px solid #BBBBBB;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align:right;
+}
+section footer{
+	float: right;
+}
