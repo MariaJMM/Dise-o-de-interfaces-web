@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iDESWEB desarrolos web a tu medida</title>
+    <link rel="stylesheet" href="formulario.css">
 </head>
 <header>
 <h1>Registro - iDESWEB</h1>
@@ -35,8 +36,9 @@
     
         <h2>iDESWEB</h2>
         <h2>Formulario de registro</h2>
-    <form action="/action_page.php" autocomplete="on">
-    <p>Los campos obligatorios van seguidos de <strong> <abbr title = "required"> * </abbr> </strong>.</p>
+    <!-- <form action="/action_page.php" autocomplete="on"> no metemos el php ya que no lo tenemos-->
+        <form action="#" method="POST">
+		    <p>Los campos obligatorios van seguidos de <strong> <abbr title = "required"> * </abbr> </strong>.</p>
             <fieldset>
             <legend>¿Qui&eacute;n eres ?</legend> 
             <label for="nombre">Nombre </label>
@@ -46,7 +48,7 @@
             <label for="correoelectronico">Correo Electrónico</label>
             <input type="email" id="correoelectronico" name="correotext" required>* <br/><br/>
             <label for="fechadenacimiento">Fecha De Nacimiento</label>
-            <select id="fechadenacimiento" name="diatext">
+            <!-- <select id="fechadenacimiento" name="diatext">
                 <option value="dia">Dia</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -211,17 +213,29 @@
                     <option value="1902">1902</option>
                     <option value="1901">1901</option>
                     <option value="1900">1900</option>
-                    </select><br /><br />
-            <input type="submit" name="submit" value="Enviar" />
-            <input type="reset"  name="reset" value="Restablecer"/>
+                    </select><br /><br /> 
+                esto es mucho más facil-->
+                
+            <!-- solo puede haber un submit y un reset y evidentemente un solo formulario
+                <input type="submit" name="submit" value="Enviar" />
+            <input type="reset"  name="reset" value="Restablecer"/> -->
+            <p>
+                <label for="fechaNacimiento">Fecha Nacimiento *</label>
+                <!-- <input type="date" name="fechaNacimiento" id="fechaNacimiento" required> -->
+                <!-- puedes usar esto o -->
+                <input type="number" id="fechaNacimiento" name="dia" min="1"
+                    class="numero2" max="31" size="4" value="dia" placeholder="dia" required>
+                <label for="mes" class="oculta">mes</label><input type="number" id="mes" name="mes" min="1" max="12"
+                    class="numero2" size="4" placeholder="mes" required>
+                <label for="year" class="oculta">año</label><input type="number" id="year" name="year" min="1900"
+                    max="2013" class="numero4" value="año" size="4" placeholder="año" required>
+            </p>
             </fieldset>
-    </form>
-    
-        
+    <!-- </form>
         
             
             <form action="/action_page.php" autocomplete="on">
-            <fieldset>
+            <fieldset> -->
             <legend>¿ De d&oacute;nde eres ?</legend>
             <label for="ciudad">Ciudad</label>
             <input type="text" id="ciudad" name="ciudadtext"><br /><br />
@@ -229,6 +243,26 @@
             <input type="number" id="codigopostal" name="codigopostal"><br /><br />
             <label for="pais">País</label>
             <select id="pais" name="pais">
+                <!-- queda mejor así
+                <label for="paises">País *</label>
+					<select id="paises" name="paises" required>
+						<option value="">Seleccione un país</option>
+						<optgroup label="Europa">
+							<option value="España">España</option>
+							<option value="Francia">Francia</option>
+							<option value="Italia">Italia</option>
+						</optgroup>
+						<optgroup label="America">
+							<option value="EEUU">Estados Unidos</option>
+							<option value="Mejico">Méjico</option>
+							<option value="Cuba">Cuba</option>
+						</optgroup>
+						<optgroup label="Asia">
+							<option value="India">India</option>
+							<option value="China">China</option>
+							<option value="Japon">Japón</option>
+						</optgroup>
+					</select>-->
                 <option value="dia">País</option>
                 <option value="albania">Albania</option>
                 <option value="alemania">Alemania</option>
@@ -282,13 +316,13 @@
                 <option value="turquia">Turquia</option>
                 <option value="ucrania">Ucrania</option>
             </select>
-            <input type="submit" name="submit" value="Enviar" />
+            <!-- <input type="submit" name="submit" value="Enviar" />
             <input type="reset"  name="reset" value="Restablecer"/>
-           
+            -->
         </fieldset>
-    </form> 
+    <!-- </form> 
      
-        <form action="/action_page.php" autocomplete="on"> 
+        <form action="/action_page.php" autocomplete="on">  -->
             <fieldset>
             <legend>¿C&oacute;mo quieres iniciar sesi&oacute;n ?</legend>
             <label for="nombredeusuario">Nombre de usuario</label>
@@ -300,20 +334,23 @@
             <input type="submit" name="submit" value="Enviar" />
             <input type="reset"  name="reset" value="Restablecer"/>
             </fieldset>
-        </form>
+        <!-- </form>
         
        
         
-        <form action="/action_page.php" autocomplete="on">
+        <form action="/action_page.php" autocomplete="on"> -->
             <fieldset>
             <legend>Condiciones de registro</legend>
-                Deseo recibir ofertas de iDESWEB <input type="radio" id="overnight" name="una vez al dia" value="overnight"  /><label for="overnight">Una vez al Día </label>
-                <input type="radio"  id="night" name="una vez a la semana" value="night" /><label for="overnight"> Una vez a la semana</label>
-                <input type="radio" id="acepto" name="una vez al mes" value="twoday" /><label for="acepto">Una vez al mes </label> <br /> <br />
+                Deseo recibir ofertas de iDESWEB 
+                <input type="radio" id="overnight" name="una vez al dia" value="diario"  /><label for="overnight">Una vez al Día </label>
+                <!-- los id tienen que coincidir con el form, he cambiado también los value-->
+                <input type="radio"  id="semanal" name="una vez a la semana" value="semanal" /><label for="semanal"> Una vez a la semana</label>
+                <input type="radio" id="mensual" name="una vez al mes" value="mensual" /><label for="mensual">Una vez al mes </label> <br /> <br />
 
                 <input type="checkbox" id="acepto2" name="aceptar" value="acepto2" checked="checked"  required /><label for="acepto2" >Acepto el acuerdo de servicios, la declaración de privacidad y la declaración de uso de cookies</label> *<br /> <br />
-                <input type="submit"  id="submit" name="submit" value="Enviar" /><label for="submit"></label>
-                <input type="reset"  id="reset" name="reset" value="Restablecer"/><label for="reset"></label>
+                <input type="submit"  id="submit" name="submit" value="Enviar" />
+                <!-- <label for="submit"></label> submit no necesita label, reset si-->
+                <input type="reset"  id="reset" name="reset" value="Restablecer"/><label class="oculta" for="reset">Limpiar</label>
             </fieldset>
         </form>
 

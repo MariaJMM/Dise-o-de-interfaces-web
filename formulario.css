@@ -37,6 +37,11 @@ header li{
     
   }
 
+  .oculta{
+      display: none;
+      width: 0;
+  }
+
  footer{
 
     height: 70px;
@@ -55,15 +60,15 @@ header li{
  }
  input:valid,
 textarea:valid  {
-    background: green; 
+    background: rgba(0, 128, 0, 0.226); 
     
 }
  
 input:invalid,
 textarea:invalid {
-    background: red;
+    background: rgba(255, 0, 0, 0.151); /* he puesto un color más claro*/
 }
 
 a:focus {
-    outline: 2px dotted rgb(30, 75, 199);
+    outline: 2px dotted rgba(30, 75, 199, 0.116);
   }
