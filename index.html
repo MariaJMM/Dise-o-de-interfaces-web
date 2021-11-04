@@ -1,121 +1,213 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="tutorial.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="tutorial.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tutorial HTML5</title>
 </head>
-    <div>
+<!-- <div>
     <figure>
-    <img src="HTML5.png" alt="Logo de html5"/>
-     </figure> 
-    </div>
-<header role="banner">
+        <img src="HTML5.png" alt="Logo de html5" />
+    </figure>
+</div> 
+esto tiene que estar en la cabecera-->
+    <!-- role="banner"-->
+    <!-- role lo ponemos en aquellos elmentos de html que no tienen una función específica
+    en caso de: sectio, hearde, body, footer, nav no lo precisa-->
+    <!-- <section id="uno"> -->
+        <!-- sería mejor emplear id que indicaran que contenido es ejemplo, cabecera-menu-->
+        <header id="cabecera-wrapper">
+            <a id="logo" href="" aria-label="Pagina principal"><img src="./HTML5.png" alt="Logo de HTML5" /></a>
+        <section id="cabecera">
+                <h1 id="titulo">Tutorial de <span>HTML5</span></h1>
     
-    <section id="uno">
-        
-         <h1 id="principio">Tutorial de HTML5</h1>
-         <nav id="menu" role="navigation">
-             <ul>
-                 <li class="current_page_item"><a  href="#">Inicio</a></li>
-                 <li class="current_page_item"><a  href="#">Sem&aacute;mtica</a></li>
-                 <li class="current_page_item"><a  href="#">Listas</a></li>
-                 <li class="current_page_item"><a  href="#">Formularios</a></li>
-                 <li class="current_page_item"><a  href="#">Im&aacute;genes</a></li>
-             </ul>
-         </nav>
-     
+    <!--     <h1 id="principio">Tutorial de HTML5</h1> -->
+        <nav id="menu">
+            <!--role="navigation"-->
+            <ul>
+                <li class="current_page_item"><a href="#">Inicio</a></li>
+                <!-- current_page_item es solo para la opción del menú en la que estamos 
+                    <li class="current_page_item"><a href="#">Sem&aacute;mtica</a></li>
+                <li class="current_page_item"><a href="#">Listas</a></li>
+                <li class="current_page_item"><a href="#">Formularios</a></li>
+                <li class="current_page_item"><a href="#">Im&aacute;genes</a></li> -->
+                <li><a href="#">Semántica</a></li>
+                <li><a href="#">Listas</a></li>
+                <li><a href="#">Formularios</a></li>
+                <li><a href="#">Imagenes</a></li>
+            </ul>
+        </nav>
     </section>
 </header>
-<body role="main">
-  
-    <div id="casa">
-        
-        <p><b>¿Qu&eacute; es HTML?</b></p>
-        <p><b>Historia del HTML</b></p>
-        <p><b>La estructura de HTML5</b></p>
-        
-    </div>
 
-    <section id="lateral-dch">
-        
+<body>
+    <!--role="main"-->
+
+    <!--  <div id="casa"-->
+    <!-- esto lo puedes poner en un section-->
+    <main>
+         <nav id="menu-lateral">
+                    <ul>
+                        <li><a href="#queEs">¿Qué es HTML? </a> </li>
+                        <li><a href="#historia">Historia del HTML</a></li>
+                        <li><a href="#estructura">La estructura de HTML5</a></li>
+                        <li>Etiquetas básicas HTML5 </li>
+                    </ul>
+        </nav>
+                <!-- <p><strong>¿Qu&eacute; es HTML?</strong></p>
+        <p><b>Historia del HTML</b></p>
+        <p><b>La estructura de HTML5</b></p> -->
+            <!-- </div> -->
+        <section id="contenido">
+
+            <section class="seccion" id="queEs">
+                <!-- pon id que idetifique la sección o el formato, ejemplo contenido, lateral-derecha-->
+<!-- solo puede haber un h1 en la página
+                <h1>¿Qu&eacute; es HTML?</h1>-->
+                <h2>¿Qué es HTML?</h2>
+                <p>
+                    <b>HTML</b>(por sus siglas eb ingl&eacute;s,HyperText Markup
+                    Language),<b>es un lenguaje de marcado que nos<br />
+                        permite hacer la estructura de una p&aacute;g web</b>.Tenemos que aclarar que html no es un
+                    lenguaje
+                    <br />
+                    de programaci&oacute;n, pues carece de mecanismos oara ejecutar
+                    calculos, repeticiones o condiciones, lo <br />
+                    que si es, es un lenguajede marcado. Es un lenguaje que le indica al
+                    navegador web que tipo de <br />
+                    es el que est&aacute; en la estructura de una p&aacute;g web<br />
+                </p>
+            </section>
+
+            <hr />
+            <section class="seccion" id="historia">
+                <h2>Historia de Html</h2>
+                <p>
+                    La historia completa de HTML es tan interesante como larga, por lo que a
+                    continuaci&oacute;n se muestra su <br />
+                    historia resumida a partir de la informaci&oacute;n que se puede
+                    encontrar en la wikipedia.<br />
+                    El origen de html se remonta a 188o,cuando el F&iacute;sico<b>
+                        Tim Berners-Lee</b>,trabajador del
+                    <a href="https://home.cern/science/computing/birth-web">CERN</a><br />
+                    (Organizaci&oacute;nEuropea para la investigaci&oacute;n
+                    Nuclear)propuesto un nuevo sistema de &quot;hipertexto&quot; para<br />
+                    compartir documentos .
+                </p>
+                <p>
+                    Los sistemas de &quot;hipertexto&quot; habian sido desarrollados años
+                    antes.En el &aacute;mbito de la inform&aacute;tica,el <br />
+                    &quot;hipertexto&quot; permitia que los usuarios accedieran a la
+                    informaci&oacute;nrelacionada con los documentos <br />
+                    electr&oacute;nicos que estaban visualizando.De cierta manera, los
+                    primeros sistemas de &quot;hipertexto&quot;podr&iacute;an<br />
+                    asimilarse a los enlaces de las p&aacute;ginas web actuales
+                </p>
+                <!-- <div id="hola3">
+        <p> -->
+                Propuestas de est&aacute;ndar, llamadas HTML y HTML + consiguieron
+                convertirse en est&aacute;ndar oficial.
+                </p>
+                <figure>
+                    <img src="evolucion.png" alt="Fotografia de la evolución de HTML" />
+                </figure>
+            </section>
+
+            <!-- </div> -->
+            <section class="seccion" id="estructura">
+                <h2>La estructura de HTML5</h2>
+                <p><strong>HTML5</strong> es la versión 5 del lenguaje de marcado HTML. Un documento escrito en HTML
+                    tiene una estructura básica como la siguiente:</p>
+                <section class="codigo">
+                    <ol>
+                        <li>
+                            <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+                        </li>
+                        <li>
+                            <pre><code>&lt;html lang="es"&gt;</code></pre>
+                        </li>
+                        <li>
+                            <pre><code>&lt;head&gt;</code></pre>
+                        </li>
+                        <li>
+                            <pre><code>    &lt;meta charset="utf-8""&gt;</code></pre>
+                        </li>
+                        <li>
+                            <pre><code>    &lt;title&gt;Tutorial de HTML5&lt;/title"&gt;</code></pre>
+                        </li>
+                        <pre><code>&lt;/head&gt;</code></pre>
+                        <li>
+                            <pre><code>&lt;body&gt;</code></pre>
+                        </li>
+                        <pre><code>    &lt;h1&gt;Tutorial de HTML5&lt;/h1"&gt;</code></pre>
+                        <pre><code>&lt;/body&gt;</code></pre>
+                        <pre><code>&lt;/html&gt;</code></pre>
+                    </ol>
+                </section>
+        </section>
+    </section>
+        <section id="lateral-dch">
             <h3>Buscar</h3>
-                <form  action="https://lineadecodigo.com/search" method="get" role="busqueda">
-                           
-                            <label for="busqueda" ></label>
-                            <input  type="search" id="busqueda" name="q" />
-                            <input  type="submit" value=" "/>       
-                </form>
-            
-            <article >
-             
-                    <h2>Enlaces a video tutoriales</h2>
+            <form action="https://lineadecodigo.com/search" method="get" role="busqueda">
+                <label for="busqueda"></label>
+                <input type="search" id="busqueda" name="q" />
+                <input type="submit" value=" " />
+            </form>
+
+            <article>
+                <h2>Enlaces a video tutoriales</h2>
                 <nav role="navigation">
                     <ul id="circle">
-                        <li ><a  href="http://www.manualweb.net/html5/introduccion-html5/">Introduci&oacute;n a HTML5</a></li>
-                        <li ><a  href="https://rolandocaldas.com/php/html5-estructura-basica">Estructuras b&aacute;sicas de HTML5</a></li>
-                        <li ><a  href="https://rolandocaldas.com/php/html5-estructura-basica">P&aacute;rrafos en HTML5</a></li>
-                        <li ><a  href="http://www.manualweb.net/html/listas-html/">Listas ordenadas y desordenadas</a></li>
-                    </ul>  
-                   
+                        <li>
+                            <a href="http://www.manualweb.net/html5/introduccion-html5/">Introduci&oacute;n a HTML5</a>
+                        </li>
+                        <li>
+                            <a href="https://rolandocaldas.com/php/html5-estructura-basica">Estructuras b&aacute;sicas
+                                de
+                                HTML5</a>
+                        </li>
+                        <li>
+                            <a href="https://rolandocaldas.com/php/html5-estructura-basica">P&aacute;rrafos en HTML5</a>
+                        </li>
+                        <li>
+                            <a href="http://www.manualweb.net/html/listas-html/">Listas ordenadas y desordenadas</a>
+                        </li>
+                    </ul>
                 </nav>
             </article>
             <article>
-                    <h2>Enlaces a p&aacute;ginas de consulta</h2>
-                
-                    <nav role="navigation">
-                    
-                    <ul>
-                        <li ><a  href="https://www.arsys.es/blog/soluciones/hosting/estructura-de-html5-y-para-que-se-utiliza-la-semantica-del-codigo/">Estructura del c&oacute;digo HTML5</a></li>
-                        <li ><a  href="http://www.noeliaespinosa.com/mostrar-codigo-html-sin-que-se-ejecute/">Como mostrar etiquetas HTML como <br />texto</a></li>
-                        <li ><a  href="https://www.google.com/search?q=w3schools&rlz=1C1VDKB_esES947ES947&oq=w3&aqs=chrome.1.69i57j0i433i512j46i199i433i465i512j69i59l2j0i433i512j69i60l2.2477j0j7&sourceid=chrome&ie=UTF-8">W3schools</a></li>
-                        
-                    </ul>
-                    </nav>
-            </article>
-    </section>
+                <h2>Enlaces a p&aacute;ginas de consulta</h2>
 
-    <section id="hola">
-        
-    <h1>¿Qu&eacute; es HTML?</h1>
-        <p><b>HTML</b>(por sus siglas eb ingl&eacute;s,HyperText Markup Language),<b>es un lenguaje de marcado que nos<br/>
-            permite hacer la estructura de una p&aacute;g web</b>.Tenemos que aclarar que html no es un lenguaje <br/>
-            de programaci&oacute;n, pues carece de mecanismos oara ejecutar calculos, repeticiones o condiciones, lo <br/>
-            que si es, es un lenguajede marcado. Es un lenguaje que le indica al navegador web que tipo de <br/>
-            es el que est&aacute; en la estructura de una p&aacute;g web<br /></p>
-        
-    </section>
-    
-    <hr>
-    <section id="hola2">
-        
-        <h1>Historia de Html</h1>
-        <p>La historia completa de HTML es tan interesante como larga, por lo que a continuaci&oacute;n se muestra su <br />
-        historia resumida a partir de la informaci&oacute;n que se puede encontrar en la wikipedia.<br />
-        El origen de html se remonta a 188o,cuando el F&iacute;sico<b> Tim Berners-Lee</b>,trabajador del <a href="https://home.cern/science/computing/birth-web" >CERN</a><br>
-        (Organizaci&oacute;nEuropea para la investigaci&oacute;n Nuclear)propuesto un nuevo sistema de &quot;hipertexto&quot; para<br />
-        compartir documentos . </p>
-        <p>Los sistemas de &quot;hipertexto&quot; habian sido desarrollados años antes.En el &aacute;mbito de la inform&aacute;tica,el <br />
-        &quot;hipertexto&quot; permitia que los usuarios accedieran a la informaci&oacute;nrelacionada con los documentos <br />
-        electr&oacute;nicos que estaban visualizando.De cierta manera, los primeros sistemas de &quot;hipertexto&quot;podr&iacute;an<br />
-        asimilarse a los enlaces de las p&aacute;ginas web actuales</p>
-        
-    </section>
-    <div id="hola3">
-    
-        <p>Propuestas de est&aacute;ndar, llamadas HTML y HTML + consiguieron convertirse en est&aacute;ndar oficial.</p>
-        <figure>
-            <img src="evolucion.png" alt="Fotografia de la evolución de HTML" />
-        </figure>
-    
-    </div>
-   <div>
-       <footer>
-        <a href="#principio">Ir arriba</a>
-       </footer>
-   </div>
-    
+                <nav role="navigation">
+                    <ul>
+                        <li>
+                            <a
+                                href="https://www.arsys.es/blog/soluciones/hosting/estructura-de-html5-y-para-que-se-utiliza-la-semantica-del-codigo/">Estructura
+                                del c&oacute;digo HTML5</a>
+                        </li>
+                        <li>
+                            <a href="http://www.noeliaespinosa.com/mostrar-codigo-html-sin-que-se-ejecute/">Como mostrar
+                                etiquetas HTML como <br />texto</a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.google.com/search?q=w3schools&rlz=1C1VDKB_esES947ES947&oq=w3&aqs=chrome.1.69i57j0i433i512j46i199i433i465i512j69i59l2j0i433i512j69i60l2.2477j0j7&sourceid=chrome&ie=UTF-8">W3schools</a>
+                        </li>
+                    </ul>
+                </nav>
+            </article>
+        </section>
+        <p id="fin"><a href="#principio">Ir arriba</a></p>
+    </main>
+    <!-- <div> para que usas un div aquí?-->
+    <footer>
+       <p>Cookies</p>
+       <p>Realizado por.</p>
+    </footer>
+    <!-- </div> -->
 </body>
+
 </html>

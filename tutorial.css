@@ -1,3 +1,9 @@
+/* general */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 body {
 	margin: 20px 0px 0px 0px;
 	padding: 0;
@@ -6,6 +12,7 @@ body {
 	font-size: 14px;
 	color: #3C3D3F;
 	width: 90%;
+	margin: 0 auto; /* para centrar el contenido*/
 	
 }
 
@@ -15,29 +22,30 @@ h1, h2, h3 {
 	font-weight: normal;
 }
 
-h1 {
-	font-size: 2em;
-}
-
 h2 {
+	font-size: 2em;
+} 
+
+h1 {
 	font-size: 2.8em;
 }
 
 h3 {
 	font-size: 1.6em;
 }
-
+/* menu */
 p, ul, ol {
 	margin-top: 0;
 	line-height: 180%;
 } 
-  ul li{
-	float: left;
+/* no puedes poner esto para todos los li
+ul li{
+	float: left; /* no se usa float left para cada li
 	list-style: none;
 	display: inline;
 	text-decoration: none;
 
-}
+}*/
 #uno h1{
 	width: 30%;
 	float: left ;
@@ -59,49 +67,71 @@ width:200px;
 margin: right 20px;
 float: left;
 }
-header{
-	width: max 1200px; 
+
+/* cabecera */
+/* header{
+/* 	width: max 1200px; 
 	width: min 600px;
-	height: 50px;
+	esto no se pone así
+   height: 50px;
 	margin-top: 0px;
 	margin-right: auto;
 	margin-bottom: 20px;
 	margin-right:auto ;
+} */
+#wrapper {
+	margin: 0 auto;
+	padding: 0;
+}
+
+/* Cabecera */
+
+#cabecera {
+	width: 85%;
+	max-width: 1200px;
+	min-width: 600px;
+	height: 50px;
+	margin: 2% auto 2% auto;
+	/*background-image:  url(images/img01.jpg) no-repeat right top;*/
 }
 header img{
 	width: 150px;
 }
+/* Logo */
 
+#logo {
+	float: left;
+	width: 150px;
+	margin: 0;
+	padding: 0;
+}
+
+#titulo{
+	overflow: hidden;
+	float: left;
+	width: 30%;
+	margin: 0 auto 0 10px;
+	padding: 0;
+	color: #000000;
+}
+#titulo h1 {
+	letter-spacing: -1px;
+	font-size: 2.8em;
+	color: #0C0C0C;
+}
+/*
 #hola ,#hola1, #hola2,#hola3{
 padding-top:20px;
 padding-bottom: 10px;
 display: block;	
-}
+}*/
 #hola img{
 	margin-left:10px;
 }
-#lateral-dch {
-	float: right;
-	width:20%;
-	margin-top:0px;
-	margin-left:200px; 
-	text-align:left;
-
-
-	
-}
-#lateral-dch ul{
-	text-decoration: none;
-	list-style-type: square;
-}
-form {
-	float:right;
-	width: 280px;
-	height: 40px;
-}
-
 /* logo */
 /* Menu */
+/* es mejor no tocar tanto los márgenes y tratar de colocarlo sin especificar tanto margen, 
+ya que de esta forma la página se adaptaría mejor a cualquier tipo de pantalla
 #menu {
 	margin-top: 13px;
 	margin-left: 30px;
@@ -136,17 +166,124 @@ section nav {
 
 #menu .current_page_item a {
 	color: #FFFFFF;
+}*/
+/* Menu */
+
+#menu {
+	float: right;
+	width: 700px;
+}
+
+#menu ul {
+	margin: 0px;
+	padding: 0px 0px 0px 15px;
+	list-style: none;
+}
+
+#menu li {
+	float: left;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	height: 37px;
+	padding: 10px 30px 0px 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #0C0C0C;
+}
+
+#menu a:hover, #menu .current_page_item a {
+	background: #EB1D1D;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#menu .current_page_item a {
+	color: #FFFFFF;
+}
+
+/* contenido lateral derecha*/
+#lateral-dch {
+	float: right;
+	width: 20%;
+	margin-top:0px;
+	/* margin-left:200px; 
+	text-align:left; */
+	padding: 0px;
+
+}
+#lateral-dch ul{
+	text-decoration: none;
+	list-style-type: square;
+}
+form {
+	float:right;
+	width: 280px;
+	height: 40px;
+}
+
+/* contenido lateral izquierdo */
+.lateral-izq {
+	display: block;
+	float: left;
 }
 
 
 /* buscar */
 
-/* Pagina */
+/* main */
+main{
+	width: 90%;
+	margin: 60px auto;
+	padding: 0px;
+	height: auto;
+	clear: both;
+}
 
 /* menú lateral */
+/* menú lateral izquierda */
+
+#menu-lateral{
+	float: left;
+	width: 20%;
+	font-weight: bold;
+}
+#menu-lateral ul{
+	list-style: none;
+}
+#menu-lateral a{
+	text-decoration: none;
+	color: black;
+}
+#menu-lateral h2{
+	size: 1.4em;
+	padding: 20px auto;
+}
 
 
 /* contenido */
+
+#contenido {
+	float: left;
+	width: 50%;
+	padding: 0px 0px 0px 0px;
+	background: #FFFFFF;
+}
+
+.seccion {
+	margin-bottom: 30px;
+	padding: 0px 0px;
+}
+/* corrección */
+.codigo{
+	font-family: 'Courier New', Courier, monospace;
+	margin-left: 10%;
+}
 
 /* lateral-dch */
 
@@ -156,17 +293,26 @@ section nav {
 	color: #414141;
 }
 
+#fin{
+	clear: both;
+	margin-left: 10%;
+}
 /* Footer */
 
-#footer  {
-	
-	width:max 1200px;
+footer  {
+	/* corrección */
+	clear: both;
+	/*
+	width:max 1200px;*/
+	max-width: 1000px;
+	width: 60%;
+	margin: 0 auto;
 	height: 20px;
-	margin-left: 1000px;
+/*margin-left: 1000px;*/
 	border-top: 1px solid #BBBBBB;
 	font-family: Arial, Helvetica, sans-serif;
-	text-align:right;
+	/* text-align:right; */
 }
-section footer{
+/* section footer{
 	float: right;
-}
+} */
