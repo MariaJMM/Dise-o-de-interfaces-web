@@ -1,0 +1,106 @@
+/*   GENERAL */
+
+/* centramos el contenido de la página */
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    clear: both;
+    /* esta propiedad se coloca en el siguiente contenedor tras un contenedor/es posicionados con float, si
+    no la ponemos el contenido se descoloca colocándose a continuación del último elemento float, nosotros no queremos eso
+    queremos que main se coloque debejo de la cabecera*/
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+/* CABECERA  */
+
+header img {
+    width: 180px;
+    height: 100px;
+    float: left;
+}
+
+header nav {
+    float: right;
+}
+
+header ul {
+    list-style: none;
+    background-color: rgb(248, 255, 254);
+    line-height: 50px;
+    overflow: auto;
+    width: 880px;
+}
+
+header li {
+    margin-left: 65px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    width: 100px;
+    display: inline-block;
+}
+
+header a {
+    text-decoration: none;
+    display: block;
+    color: black;
+    text-align: center;
+}
+
+/* etaría bien remarcar en el menú en que estamos */
+
+a#activa {
+    background: #127db648;
+}
+
+/* para que no se vean afectados todos los enlaces de la página ponemos delante que es el de header */
+header nav a:hover, a#activa:hover {
+    background: #127db6;
+    font-family: cursive;
+    font-size: 20px;
+    color: black;
+}
+
+/* FOMULARIO */
+
+/* esta regla la uso para ocultar el label al usuario pero dejandolo así visible a los lectores de pantalla*/
+
+.oculta {
+    display: none;
+    width: 0;
+}
+
+input:valid, textarea:valid {
+    background: rgba(0, 128, 0, 0.226);
+}
+
+input:invalid, textarea:invalid {
+    background: rgba(255, 0, 0, 0.151);
+    /* he puesto un color más claro*/
+}
+
+a:focus {
+    outline: 2px dotted rgba(30, 75, 199, 0.116);
+}
+
+/* PIE */
+
+footer {
+    height: 70px;
+    width: 1000px;
+}
+
+footer nav ul li {
+    list-style: none;
+    text-decoration: none;
+    font-family: 18px;
+    /* background-color: grey; */
+    float: left;
+}
+
+footer img {
+    float: right;
+}

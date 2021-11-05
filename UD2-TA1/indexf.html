@@ -23,7 +23,7 @@
         <li><a href="#">Productos</a></li>
         <li><a href="#">Proyectos</a></li> 
         <li><a href="#">Contacta</a></li>
-        <li><a href="indexf.html">Alta</a></li>
+        <li><a id="activa" href="indexf.html">Alta</a></li>
     </ul>
 </nav>
 
@@ -31,23 +31,34 @@
 
 
 <main>
-    <section>
+    <!-- <section> -->
         
     
-        <h2>iDESWEB</h2>
+        <!-- <h2>iDESWEB</h2> -->
         <h2>Formulario de registro</h2>
-    <!-- <form action="/action_page.php" autocomplete="on"> no metemos el php ya que no lo tenemos-->
-        <form action="#" method="POST">
+    <!-- <form action="/action_page.php" autocomplete="on"> no metemos el php ya que no lo tenemos
+        por ahora solo indicamos el método de envio-->
+        <form action="#" method="POST" autocomplete="on">
 		    <p>Los campos obligatorios van seguidos de <strong> <abbr title = "required"> * </abbr> </strong>.</p>
             <fieldset>
             <legend>¿Qui&eacute;n eres ?</legend> 
             <label for="nombre">Nombre </label>
-            <input type="text" id="nombre" name="texfiel" required >* 
+            <input type="text" id="nombre"  name="texfiel" required >* <!-- a este campo le falta el autofocus para que el foco recaiga automáticamente
+            en este campo y el pattern con la expresión regular necesaria para validar el código. Para que una página web sea
+            usable debemos controlar todos los errores y realizar toda interacción de la misma de una forma sencialla para el usuario
+            para ello a parte de poner una expresión regular para cada campo del formulario empleamos el title para explicar comoç
+            tenemos que cubrirlo y usamos placeholder para indicar que tiene que contener el campo. Ejemplo
+        	<input type="text" name="nombre" id="nombre" autofocus autocomplete="on" title="Indica tu nombre de pila. Hasta 15 caracteres inclidas tildes"
+					placeholder="Nombre de pila" pattern="[a-záéíóúüñ A-ZÁÉIÓÚÜÑ]{1,15}" accesskey="N" required>
+            para el resto de campos 
+        
+        
+        -->
             <label for="apellidos">Apellidos</label>
             <input type="text" id="apellidos" name="textfiel" required >* <br/><br/>
             <label for="correoelectronico">Correo Electrónico</label>
             <input type="email" id="correoelectronico" name="correotext" required>* <br/><br/>
-            <label for="fechadenacimiento">Fecha De Nacimiento</label>
+            <!-- <label for="fechadenacimiento">Fecha De Nacimiento</label> -->
             <!-- <select id="fechadenacimiento" name="diatext">
                 <option value="dia">Dia</option>
                 <option value="1">1</option>
@@ -97,10 +108,8 @@
                 <option value="11">11</option>
                 <option value="12">12</option>
                 </select>
-                <select id="año" name="año">
-                    <option value="año">Año</option>
-                    <option value="2013">2013</option>
-                    <option value="2012">2012</option>
+                <select id="año" name="año">    /* background-color: grey; */
+/option>
                     <option value="2011">2011</option>
                     <option value="2010">2010</option>
                     <option value="2009">2009</option>
@@ -234,8 +243,8 @@
     <!-- </form>
         
             
-            <form action="/action_page.php" autocomplete="on">
-            <fieldset> -->
+            <form action="/action_page.php" autocomplete="on">-->
+            <fieldset> 
             <legend>¿ De d&oacute;nde eres ?</legend>
             <label for="ciudad">Ciudad</label>
             <input type="text" id="ciudad" name="ciudadtext"><br /><br />
@@ -331,28 +340,28 @@
             <input type="text" id="contraseña" name="contraseñatext" minlength="5" maxlength="40" required pattern="[A-Za-z0-9]+">* <br /><br />
             <label for="contraseñaa">Vuelve a escribir la contraseña </label>
             <input type="text"  id ="contraseñaa" name="contraseñatextt" minlength="5" maxlength="40" required pattern="[A-Za-z0-9]+">* <br /><br />
-            <input type="submit" name="submit" value="Enviar" />
-            <input type="reset"  name="reset" value="Restablecer"/>
+            <!-- <input type="submit" name="submit" value="Enviar" />
+            <input type="reset"  name="reset" value="Restablecer"/> -->
             </fieldset>
         <!-- </form>
-        
-       
-        
-        <form action="/action_page.php" autocomplete="on"> -->
+              <form action="/action_page.php" autocomplete="on"> -->
             <fieldset>
             <legend>Condiciones de registro</legend>
                 Deseo recibir ofertas de iDESWEB 
-                <input type="radio" id="overnight" name="una vez al dia" value="diario"  /><label for="overnight">Una vez al Día </label>
+                <!-- una sencilla forma de colocar los elementos de un formulario es colocar el label y el input dentro de un p-->
+                <p><input type="radio" id="overnight" name="una vez al dia" value="diario"  /><label for="overnight">Una vez al Día </label></p>
                 <!-- los id tienen que coincidir con el form, he cambiado también los value-->
-                <input type="radio"  id="semanal" name="una vez a la semana" value="semanal" /><label for="semanal"> Una vez a la semana</label>
-                <input type="radio" id="mensual" name="una vez al mes" value="mensual" /><label for="mensual">Una vez al mes </label> <br /> <br />
-
-                <input type="checkbox" id="acepto2" name="aceptar" value="acepto2" checked="checked"  required /><label for="acepto2" >Acepto el acuerdo de servicios, la declaración de privacidad y la declaración de uso de cookies</label> *<br /> <br />
-                <input type="submit"  id="submit" name="submit" value="Enviar" />
-                <!-- <label for="submit"></label> submit no necesita label, reset si-->
-                <input type="reset"  id="reset" name="reset" value="Restablecer"/><label class="oculta" for="reset">Limpiar</label>
+                <p><input type="radio"  id="semanal" name="una vez a la semana" value="semanal" /><label for="semanal"> Una vez a la semana</label></p>
+                <p><input type="radio" id="mensual" name="una vez al mes" value="mensual" /><label for="mensual">Una vez al mes </label></p>
+                <p><input type="checkbox" id="acepto2" name="aceptar" value="acepto2" checked="checked"  required /><label for="acepto2" >Acepto el acuerdo de servicios, la declaración de privacidad y la declaración de uso de cookies</label> *</p>
             </fieldset>
+            <!-- ponemos los botones fuera del fieldset-->
+            <!-- <label for="submit"></label> submit no necesita label, reset si-->
+            <input type="submit"  id="submit" name="submit" value="Enviar" />
+            <input type="reset"  id="reset" name="reset" value="Restablecer"/>
+            <label class="oculta" for="reset">Limpiar</label>
         </form>
+    </main>
 
 <footer>
    
